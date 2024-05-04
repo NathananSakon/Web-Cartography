@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 10 point in Bangkok </title>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css ">
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>13.77415,100.51223
+
+</head>
+
+<body>
+<div id="map" style="height: 600px"></div>
+<script>
+var map = L.map('map').setView([13.7563, 100.5018], 10);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var greenIcon = L.icon({
+iconUrl: 'marker.png',
+iconSize:     [30, 30], // size of the icon
+iconAnchor:   [15, 20], // point of the icon which will correspond to marker's location
+popupAnchor:  [0,-20] // point from which the popup should open relative to the iconAnchor		
+});
+L.marker([13.73684,100.53313],{icon:greenIcon}).addTo(map).bindPopup("<b>Chula Engineering Library</b><br>Pathum Wan district, Bangkok<br>");
+L.marker([13.77032,100.54038],{icon:greenIcon}).addTo(map).bindPopup("<b>Phayathai 2 Hospital</b><br>Phaya Thai district, Bangkok<br>");
+L.marker([13.74677,100.53501],{icon:greenIcon}).addTo(map).bindPopup("<b>Siam Paragon</b><br>Pathum Wan district, Bangkok<br>");
+L.marker([13.74076,100.54567],{icon:greenIcon}).addTo(map).bindPopup("<b>The Residence of The American Ambassador</b><br>Pathum Wan district, Bangkok<br>");
+L.marker([13.9118,100.6036],{icon:greenIcon}).addTo(map).bindPopup("<b>Don Mueang Airport</b><br>Don Mueang district, Bangkok<br>");
+L.marker([13.84560,100.57023],{icon:greenIcon}).addTo(map).bindPopup("<b>Kasetsart Engineering Library</b><br>Chatuchak district, Bangkok<br>");
+L.marker([13.8082,100.5560],{icon:greenIcon}).addTo(map).bindPopup("<b>Chatuchak Park</b><br>Chatuchak district, Bangkok<br>");
+L.marker([13.76864,100.53293],{icon:greenIcon}).addTo(map).bindPopup("<b>Phaya Thai Palace</b><br>Ratchathewi district, Bangkok<br>");
+L.marker([13.77415,100.51223],{icon:greenIcon}).addTo(map).bindPopup("<b>Dusit Palace</b><br>Dusit district, Bangkok<br>");
+L.marker([13.72669,100.51029],{icon:greenIcon}).addTo(map).bindPopup("<b>ICONSIAM</b><br>Khlong San district, Bangkok<br>");
+L.marker([13.71030,100.50909],{icon:greenIcon}).addTo(map).bindPopup("<b>Shrewbury International School Bangkok</b><br>Bang Kho laem district, Bangkok<br>");
+
+</script>
+</body>
+</html>
+
